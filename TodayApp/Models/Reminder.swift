@@ -18,7 +18,9 @@ struct Reminder: Identifiable {
 extension [Reminder] {
     
     func indexOfReminder(withId id: Reminder.ID) -> Self.Index {
-        guard let index = firstIndex(where: { $0.id == id }) else { fatalError() }
+        guard let index = firstIndex(where: { $0.id == id }) else {
+            fatalError()
+        }
         return index
     }
 }
@@ -33,7 +35,8 @@ extension Reminder {
         Reminder(
             title: "Code review",
             dueDate: Date().addingTimeInterval(14000.0),
-            notes: "Check tech specs in shared folder", isComplete: true),
+            notes: "Check tech specs in shared folder",
+            isComplete: true),
         Reminder(
             title: "Pick up new contacts",
             dueDate: Date().addingTimeInterval(24000.0),
@@ -41,10 +44,12 @@ extension Reminder {
         Reminder(
             title: "Add notes to retrospective",
             dueDate: Date().addingTimeInterval(3200.0),
-            notes: "Collaborate with project manager", isComplete: true),
+            notes: "Collaborate with project manager",
+            isComplete: true),
         Reminder(
             title: "Interview new project manager candidate",
-            dueDate: Date().addingTimeInterval(60000.0), notes: "Review portfolio"),
+            dueDate: Date().addingTimeInterval(60000.0),
+            notes: "Review portfolio"),
         Reminder(
             title: "Mock up onboarding experience",
             dueDate: Date().addingTimeInterval(72000.0),

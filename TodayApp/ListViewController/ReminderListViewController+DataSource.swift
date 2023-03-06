@@ -8,6 +8,7 @@
 import UIKit
 
 extension ReminderListViewController {
+    
     typealias DataSource = UICollectionViewDiffableDataSource<Int, Reminder.ID>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
@@ -31,6 +32,7 @@ extension ReminderListViewController {
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
         let reminder = reminder(withId: id)
+        
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
         contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
@@ -41,10 +43,8 @@ extension ReminderListViewController {
         doneButtonConfiguration.tintColor = .todayListCellDoneButtonTint
         cell.accessibilityCustomActions = [doneButtonAccessibilityAction(for: reminder)]
         cell.accessibilityValue = reminder.isComplete ? reminderCompletedValue : reminderNotCompletedValue
-        cell.accessories = [
-            .customView(configuration: doneButtonConfiguration),
-            .disclosureIndicator(displayed: .always)
-        ]
+        cell.accessories = [.customView(configuration: doneButtonConfiguration),
+                            .disclosureIndicator(displayed: .always)]
         
         var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
         backgroundConfiguration.backgroundColor = .todayListCellBackground
