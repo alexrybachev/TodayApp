@@ -83,9 +83,9 @@
 			children = (
 				280C411A29B65F550057C3DA /* TextFieldContentView.swift */,
 				280C411E29B664F00057C3DA /* TextViewContentView.swift */,
+				280C412029B6654C0057C3DA /* DatePickerContentView.swift */,
 				280C411829B65E860057C3DA /* UIView+PinnedSubview.swift */,
 				280C411C29B6606A0057C3DA /* UIContentConfiguration+Stateless.swift */,
-				280C412029B6654C0057C3DA /* DatePickerContentView.swift */,
 			);
 			path = ContentViews;
 			sourceTree = "<group>";
