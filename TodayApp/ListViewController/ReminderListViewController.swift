@@ -92,6 +92,11 @@ class ReminderListViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshBackground()
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let id = filteredReminders[indexPath.item].id
         pushDetailViewForReminder(withId: id)
@@ -101,6 +106,14 @@ class ReminderListViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         guard elementKind == ProgressHeaderView.elementKind, let progressView = view as? ProgressHeaderView else { return }
         progressView.progress = progress
+    }
+    
+    func refreshBackground() {
+        collectionView.backgroundColor = nil
+        let backgroundView = UIView()
+        let gradientLayer = CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
+        backgroundView.layer.addSublayer(gradientLayer)
+        collectionView.backgroundView = backgroundView
     }
     
     func pushDetailViewForReminder(withId id: Reminder.ID) {
@@ -137,6 +150,6 @@ class ReminderListViewController: UICollectionViewController {
     private func supplementaryRegistrationHandler(progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath) {
         headerView = progressView
     }
-    
+        
 }
 
