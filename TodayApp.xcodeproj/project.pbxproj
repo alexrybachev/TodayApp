@@ -19,6 +19,10 @@
 		280C412529B792760057C3DA /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412429B792760057C3DA /* ReminderListStyle.swift */; };
 		280C412729B7BB420057C3DA /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412629B7BB420057C3DA /* ProgressHeaderView.swift */; };
 		280C412929B7CEFC0057C3DA /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412829B7CEFC0057C3DA /* CAGradientLayer+ListStyle.swift */; };
+		280C412B29B7D2070057C3DA /* TodayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412A29B7D2070057C3DA /* TodayError.swift */; };
+		280C412D29B7D2390057C3DA /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412C29B7D2390057C3DA /* EKEventStore+AsyncFetch.swift */; };
+		280C412F29B7D3110057C3DA /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C412E29B7D3110057C3DA /* Reminder+EKReminder.swift */; };
+		280C413129B7D3A40057C3DA /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C413029B7D3A40057C3DA /* ReminderStore.swift */; };
 		28B284D129B3D7F100408039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B284D029B3D7F100408039 /* AppDelegate.swift */; };
 		28B284D329B3D7F100408039 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B284D229B3D7F100408039 /* SceneDelegate.swift */; };
 		28B284D529B3D7F100408039 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B284D429B3D7F100408039 /* ReminderListViewController.swift */; };
@@ -46,6 +50,10 @@
 		280C412429B792760057C3DA /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		280C412629B7BB420057C3DA /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		280C412829B7CEFC0057C3DA /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
+		280C412A29B7D2070057C3DA /* TodayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayError.swift; sourceTree = "<group>"; };
+		280C412C29B7D2390057C3DA /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
+		280C412E29B7D3110057C3DA /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
+		280C413029B7D3A40057C3DA /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 		28B284CD29B3D7F100408039 /* TodayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B284D029B3D7F100408039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B284D229B3D7F100408039 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 				28B284EC29B4876300408039 /* UIColor+Today.swift */,
 				28B284E729B47D1200408039 /* Date+Today.swift */,
 				280C412829B7CEFC0057C3DA /* CAGradientLayer+ListStyle.swift */,
+				280C412A29B7D2070057C3DA /* TodayError.swift */,
+				280C412C29B7D2390057C3DA /* EKEventStore+AsyncFetch.swift */,
+				280C412E29B7D3110057C3DA /* Reminder+EKReminder.swift */,
+				280C413029B7D3A40057C3DA /* ReminderStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +242,7 @@
 				280C412129B6654C0057C3DA /* DatePickerContentView.swift in Sources */,
 				28B284ED29B4876300408039 /* UIColor+Today.swift in Sources */,
 				28B284F129B48E2C00408039 /* ReminderListViewController+Actions.swift in Sources */,
+				280C412B29B7D2070057C3DA /* TodayError.swift in Sources */,
 				28B284D529B3D7F100408039 /* ReminderListViewController.swift in Sources */,
 				280C412529B792760057C3DA /* ReminderListStyle.swift in Sources */,
 				280C411D29B6606A0057C3DA /* UIContentConfiguration+Stateless.swift in Sources */,
@@ -242,9 +255,12 @@
 				280C411229B524090057C3DA /* ReminderViewController+Row.swift in Sources */,
 				280C411629B65C450057C3DA /* ReminderViewController+CellConfiguration.swift in Sources */,
 				28B284D329B3D7F100408039 /* SceneDelegate.swift in Sources */,
+				280C412F29B7D3110057C3DA /* Reminder+EKReminder.swift in Sources */,
+				280C412D29B7D2390057C3DA /* EKEventStore+AsyncFetch.swift in Sources */,
 				28B284E629B3DAF600408039 /* Reminder.swift in Sources */,
 				280C412929B7CEFC0057C3DA /* CAGradientLayer+ListStyle.swift in Sources */,
 				28B284EB29B4805100408039 /* ReminderListViewController+DataSource.swift in Sources */,
+				280C413129B7D3A40057C3DA /* ReminderStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +410,7 @@
 				DEVELOPMENT_TEAM = 6P96P67U8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodayApp/Info.plist;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Your reminders can help you stay on track.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -422,6 +439,7 @@
 				DEVELOPMENT_TEAM = 6P96P67U8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodayApp/Info.plist;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Your reminders can help you stay on track.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
